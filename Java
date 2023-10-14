@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        int[] array = {1, 2, 3, 4, 5, 6, 7};
+        List<Integer> list = new ArrayList<>();
+        for (int num : array) {
+            list.add(num);
+        }
+        Collections.shuffle(list);
+
+        System.out.println("Shuffled Array: " + list);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a Roman numeral: ");
+        String romanNumeral = scanner.nextLine();
+        int intValue = convertRomanToInteger(romanNumeral);
+        System.out.println("Integer value of " + romanNumeral + " is: " + intValue);
+        System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
+        boolean isPangram = checkIfPangram(sentence);
+        if (isPangram) {
+            System.out.println("The input is a pangram.");
+        } else {
+            System.out.println("The input is not a pangram.");
+        }
+    }
+
+    public static int convertRomanToInteger(String s) {
+        return 0; 
+    }
+
+    public static boolean checkIfPangram(String sentence) {
+        return false;
+    }
+}
